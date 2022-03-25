@@ -1,0 +1,63 @@
+h2{
+    color: chocolate;
+    font-weight: 700;
+    padding-top: 10px;
+}
+h4{
+    color: rgb(93, 136, 18);
+}
+.shop-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 10px;
+}
+.books-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 20px;
+}
+
+.selected-books{
+    height: 500px;
+    background-color: blueviolet;
+}
+
+/* ---------------------*\
+        Media query
+\* ---------------------*/
+
+/* For small devices  */
+@media only screen and (max-width: 688px){
+    .shop-container{
+        display: flex;
+        flex-direction: column;
+        /* grid-template-columns: repeat(1, 1fr); */
+        /* grid-gap: 15px; */
+    }
+    .books-container{
+        order: 2;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 15px;
+        margin: 8px;
+    }
+}
+
+/* ------------------
+    For Tab devices
+--------------------*/
+
+@media only screen and (min-width: 689px) and (max-width: 991px){
+    .shop-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 15px;
+    }
+    .books-container{
+        order: 2;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px;
+        margin: 8px;
+    }
+}
