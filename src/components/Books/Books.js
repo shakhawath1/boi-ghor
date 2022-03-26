@@ -6,12 +6,21 @@ const Books = () => {
 
 
     const [books, setBooks] = useState([]);
+    const [cart, setCart] = useState([]);
 
+    // data load for show ui
     useEffect(() => {
         fetch('books.json')
             .then(res => res.json())
             .then(data => setBooks(data));
     }, []);
+    // manage handler for addToCart
+    const addToCart = book => {
+        const newCart = [...cart, book];
+        console.log(newCart)
+        setCart(newCart);
+    }
+
 
 
     return (
@@ -21,7 +30,7 @@ const Books = () => {
             <div className='shop-container'>
                 <div class="books-container">
                     {
-                        books.map(book => <Book key={book.id} book={book}></Book>)
+                        books.map(book => <Book key={book.id} book={book} addToCart={addToCart}></Book>)
                     }
                 </div>
                 <div className='selected-books'></div>
