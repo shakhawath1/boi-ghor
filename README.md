@@ -5,5 +5,5 @@
 [Boi Ghor](https://github.com/Programming-Hero-Web-Course4/lucky-one-shakhawath1).
 
 ## Boi Ghor live website link.
-
-[Boi Ghor](https://github.com/Programming-Hero-Web-Course4/lucky-one-shakhawath1).
+Visite my Boi Ghor...
+[Boi Ghor](https://spiffy-raindrop-efcd99.netlify.app/).
