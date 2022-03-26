@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Book from '../Book/Book';
+import Cart from '../Cart/Cart';
+import Question from '../Question/Question';
 import './Books.css';
 
 const Books = () => {
@@ -15,13 +17,20 @@ const Books = () => {
             .then(data => setBooks(data));
     }, []);
     // manage handler for addToCart
-    const addToCart = book => {
-        const newCart = [...cart, book];
-        console.log(newCart)
-        setCart(newCart);
+    const addToCart = selectedbook => {
+        let newCart = [];
+        if (cart.length <= 3) {
+            const exists = cart.find(product => product.id === selectedbook.id);
+            if (!exists) {
+                newCart = [...cart, selectedbook];
+            }
+            else {
+                const rest = cart.filter(product => product.id !== selectedbook.id);
+                newCart = [...rest, exists];
+            }
+            setCart(newCart);
+        }
     }
-
-
 
     return (
         <div>
@@ -33,8 +42,11 @@ const Books = () => {
                         books.map(book => <Book key={book.id} book={book} addToCart={addToCart}></Book>)
                     }
                 </div>
-                <div className='selected-books'></div>
+                <div className='cart-books'>
+                    <Cart cart={cart}></Cart>
+                </div>
             </div>
+            <Question></Question>
         </div>
     );
 };

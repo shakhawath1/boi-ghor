@@ -8,7 +8,7 @@ h4{
 }
 .shop-container{
     display: grid;
-    grid-template-columns: 4fr 1fr;
+    grid-template-columns: 6fr 2fr;
     grid-gap: 20px;
     margin-top: 30px;
 }
@@ -20,9 +20,12 @@ h4{
     
 }
 
-.selected-books{
+.cart-books{
     height: 500px;
-    background-color: blueviolet;
+    background-color: #acdae6;
+    border-radius: 20px;
+    position: sticky;
+    top: 0;
 }
 
 /* ---------------------*\
@@ -38,7 +41,6 @@ h4{
         /* grid-gap: 15px; */
     }
     .books-container{
-        order: 2;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 15px;
@@ -57,7 +59,6 @@ h4{
         grid-gap: 15px;
     }
     .books-container{
-        order: 2;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 15px;

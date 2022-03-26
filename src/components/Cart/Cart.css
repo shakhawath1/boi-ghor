@@ -1,0 +1,36 @@
+.title{
+    margin: 20px;
+    text-align: center;
+    color: #974848;
+}
+.cart-list{
+    margin-top: 20px;
+}
+.selected-books{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 20px;
+    padding: 0px 20px;
+}
+.selected-books p{
+    margin: 0;
+}
+.cart-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.btn-div{
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+}
+.choose-btn, .remove-btn{
+    font-weight: 600;
+    color: rgb(93, 23, 73);
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #ec93ca, #f56fc8);
+    border: 2px solid rgb(195, 149, 141);
+    margin: 5px;
+}
