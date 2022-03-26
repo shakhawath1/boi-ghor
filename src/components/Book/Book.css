@@ -3,3 +3,13 @@ img{
     padding: 10px;
     border-radius: 6px;
 }
+.add-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+}
+.add-btn p{
+    margin: 0px;
+    margin-right: 8px;
+}

@@ -1,5 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import './Book.css'
 
 const Book = ({ book }) => {
@@ -15,9 +17,9 @@ const Book = ({ book }) => {
                     <h5 class="card-title">{name}</h5>
                     <p class="card-text">Price: {price}</p>
                 </div>
-                <div class="card-footer">
-                    <button class="text-muted">Add</button>
-                </div>
+                <button class="text-muted border-0 fs-5 fw-bold add-btn"><p>ADD TO CART</p>
+                    <FontAwesomeIcon icon={faShoppingCart} ></FontAwesomeIcon>
+                </button>
             </div>
         </div>
 
