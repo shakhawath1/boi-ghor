@@ -16,6 +16,7 @@ const Books = () => {
             .then(res => res.json())
             .then(data => setBooks(data));
     }, []);
+
     // manage handler for addToCart
     const addToCart = selectedbook => {
         let newCart = [];
@@ -29,7 +30,13 @@ const Books = () => {
                 newCart = [...rest, exists];
             }
             setCart(newCart);
+
         }
+    }
+    // remove data
+    const removeAll = () => {
+        const newCart = [];
+        setCart(newCart)
     }
 
     return (
@@ -43,7 +50,7 @@ const Books = () => {
                     }
                 </div>
                 <div className='cart-books'>
-                    <Cart cart={cart}></Cart>
+                    <Cart cart={cart} removeAll={removeAll}></Cart>
                 </div>
             </div>
             <Question></Question>
